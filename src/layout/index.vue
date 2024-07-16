@@ -14,21 +14,6 @@
         <settings />
       </right-panel>
     </div>
-    <div class="logoConItem">
-      <div class="logoName">POWERED BY</div>
-      <img class="logoImg" @click="openClklog" src="@/assets/images/logoFIxed.png" alt="" />
-
-    </div>
-    <!--浮动Logo-->
-    <div class="logoConItem">
-      <div class="logoName">POWERED BY</div>
-      <img
-        class="logoImg"
-        @click="openClklog"
-        src="@/assets/images/logoFIxed.png"
-        alt=""
-      />
-    </div>
   </div>
 </template>
 

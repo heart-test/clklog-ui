@@ -24,7 +24,7 @@
           "
         >
           <div class="cancleBtn" @click="closeDialog()">X</div>
-          感谢您对ClkLog的关注与支持！
+          感谢您对微阿的关注与支持！
         </div>
         <div style="text-align: center">
           为了给您提供更好的服务与支持，请填写以下表单。
@@ -33,7 +33,7 @@
 
       <div style="min-height: 700px;margin-top: 25px;">
         <div>
-          <div class="letter_h1">是否愿意接收ClkLog后续更新提醒:</div>
+          <div class="letter_h1">是否愿意接收微阿后续更新提醒:</div>
           <div style="margin-top: 20px; text-align: left">
             <el-radio
               v-model="ruleForm.receiveNotification"
@@ -56,7 +56,7 @@
           label-width="120px"
           class="demo-ruleForm"
         >
-          <!-- <div class="letter_h1">是否愿意接收ClkLog后续更新提醒:</div>
+          <!-- <div class="letter_h1">是否愿意接收微阿后续更新提醒:</div>
           <el-form-item>
             <div>
               <el-radio
@@ -89,9 +89,9 @@
           </el-form-item>
           <!-- 说明 -->
           <div class="setSpace">
-            <span class="letter_h1"> ClkLog在您的项目中的使用场景: </span>
+            <span class="letter_h1"> 微阿在您的项目中的使用场景: </span>
             <div class="letter_h2 indent">
-              以下信息仅用于我们了解ClkLog在您的项目中的使用场景，
+              以下信息仅用于我们了解微阿在您的项目中的使用场景，
               在后续产品迭代升级时考虑相关行业的特殊性，以提供更好的服务。
             </div>
           </div>
