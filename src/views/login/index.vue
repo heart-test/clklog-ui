@@ -117,12 +117,12 @@
           font-weight: 500;
         "
       >
-        <div>微信扫描下方二维码</div>
-        <div style="margin: 20px 0">关注公众号获取体验账号</div>
-        <img
-          src="@/assets/images/qrcode.png"
-          style="width: 200px; height: 200px; object-fit: cover"
-        />
+<!--        <div>微信扫描下方二维码</div>-->
+<!--        <div style="margin: 20px 0">关注公众号获取体验账号</div>-->
+<!--        <img-->
+<!--          src="@/assets/images/qrcode.png"-->
+<!--          style="width: 200px; height: 200px; object-fit: cover"-->
+<!--        />-->
         <el-button
           :loading="loading"
           type="primary"
