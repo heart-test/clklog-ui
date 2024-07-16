@@ -8,16 +8,6 @@
             src="@/assets/images/logo.png"
             @click="$router.push('/')"
           />
-          <div
-            style="
-              margin-left: 20px;
-              font-size: 12px;
-              color: rgba(76, 81, 86, 0.657);
-              margin-top: 6px;
-            "
-          >
-            社区版
-          </div>
         </div>
 
         <el-select
