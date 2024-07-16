@@ -35,7 +35,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: zcunsoft/clklog-frontend
+          images: q82618362/clklog-frontend
           tags: |
             type=schedule
             type=semver,pattern={{version}}
