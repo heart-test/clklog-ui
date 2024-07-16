@@ -2,6 +2,15 @@ name: Node.js CI
 
 on:
   workflow_dispatch:
+  inputs:
+    TARGET_REGISTRY:
+      description: '仓库地址'
+      required: true
+      default: 'registry.cn-guangzhou.aliyuncs.com'
+    TARGET_REPOSITORY:
+      description: '空间名称'
+      required: true
+      default: 'kubesphere_wen'
   push:
     branches:
       - 'main'
@@ -47,8 +56,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           # TODO: Use Secrets when Public
-          username: zcunsoft
-          password: dckr_pat_2eAU1fw60YppPltWJ7-tVJXma9o
+          username: min_rong716@163.com
+          password: tackey008362
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
@@ -65,11 +74,11 @@ jobs:
         uses: docker/login-action@v2
         with:
           # TODO: Use Secrets when Public
-          registry: registry.cn-shanghai.aliyuncs.com
-          username: clklog.githubci@zcunsoft
-          password: R7w!9F6zlqt2
+          registry: ${{ github.event.inputs.TARGET_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push image to Aliyun Docker Registry
         run: |
           docker buildx imagetools create \
-            --tag registry.cn-shanghai.aliyuncs.com/zcunsoft/clklog_frontend:${{ steps.set-tag.outputs.tag }} \
-            zcunsoft/clklog-frontend:${{ steps.set-tag.outputs.tag }}
+            --tag ${{ github.event.inputs.TARGET_REGISTRY }}/${{ github.event.inputs.TARGET_REPOSITORY }}/clklog_frontend:${{ steps.set-tag.outputs.tag }} \
+            q82618362/clklog-frontend:${{ steps.set-tag.outputs.tag }}
