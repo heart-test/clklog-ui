@@ -2,15 +2,6 @@ name: Node.js CI
 
 on:
   workflow_dispatch:
-  inputs:
-    TARGET_REGISTRY:
-      description: '仓库地址'
-      required: true
-      default: 'registry.cn-guangzhou.aliyuncs.com'
-    TARGET_REPOSITORY:
-      description: '空间名称'
-      required: true
-      default: 'kubesphere_wen'
   push:
     branches:
       - 'main'
@@ -74,11 +65,11 @@ jobs:
         uses: docker/login-action@v2
         with:
           # TODO: Use Secrets when Public
-          registry: ${{ github.event.inputs.TARGET_REGISTRY }}
+          registry: registry.cn-guangzhou.aliyuncs.com
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push image to Aliyun Docker Registry
         run: |
           docker buildx imagetools create \
-            --tag ${{ github.event.inputs.TARGET_REGISTRY }}/${{ github.event.inputs.TARGET_REPOSITORY }}/clklog_frontend:${{ steps.set-tag.outputs.tag }} \
+            --tag registry.cn-guangzhou.aliyuncs.com/private-wen/clklog_frontend:${{ steps.set-tag.outputs.tag }} \
             q82618362/clklog-frontend:${{ steps.set-tag.outputs.tag }}
