@@ -4,7 +4,7 @@ window.globalConfig = {
   projectList: [  //根据需要配置项目
     {
       value: "clklogapp",
-      label: "clklog",
+      label: "微阿",
     },
   ],
 };
