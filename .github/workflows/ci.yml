@@ -47,8 +47,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           # TODO: Use Secrets when Public
-          username: min_rong716@163.com
-          password: tackey008362
+          username: ${{ secrets.HUB_DOCKER_USERNAME }}
+          password: ${{ secrets.HUB_DOCKER_PASSWORD }}
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
