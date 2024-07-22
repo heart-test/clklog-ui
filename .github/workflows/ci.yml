@@ -86,5 +86,7 @@ jobs:
       - name: Deploy with Docker Compose
         run: |
           cd /opt/clklog-docker-compose
-          echo ${{ env.COMMIT_SHA }}
+          sed -i "s|^\(UI_V1_IMAGE=.*:\).*$|\1${{ env.COMMIT_SHA }}|" ./.env
+          docker-compose down
+          docker-compose up -d
 
