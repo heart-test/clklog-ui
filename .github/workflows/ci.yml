@@ -87,6 +87,6 @@ jobs:
         run: |
           cd /opt/clklog-docker-compose
           sed -i "s|^\(UI_V2_IMAGE=.*:\).*$|\1${{ env.COMMIT_SHA }}-v2|" ./.env
-          docker-compose down
-          docker-compose up -d
+          docker-compose -f docker-compose-clklog-full.yml down
+          docker-compose -f docker-compose-clklog-full.yml up -d
 
