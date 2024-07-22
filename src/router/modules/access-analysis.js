@@ -14,14 +14,14 @@ const nestedRouter = {
         path: "visitedPage",
         component: () => import("@/views/visitor-analysis/visited-page"),
         name: "visitedPage",
-        meta: { title: "受访页面" },
+        meta: { title: "受访页面分析" },
       },
-      {
-        path: "search",
-        component: () => import("@/views/visitor-analysis/search-analysis"),
-        name: "search",
-        meta: { title: "站外搜索" },
-      },
+      // {
+      //   path: "search",
+      //   component: () => import("@/views/visitor-analysis/search-analysis"),
+      //   name: "search",
+      //   meta: { title: "站外搜索" },
+      // },
   ],
 };
 

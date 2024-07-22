@@ -10,12 +10,12 @@ const nestedRouter = {
     icon: "userBehavior",
   },
   children: [
-    {
-      path: "portrait",
-      component: () => import("@/views/user-behavior/index"),
-      name: "portrait",
-      meta: { title: "用户画像" },
-    },
+    // {
+    //   path: "portrait",
+    //   component: () => import("@/views/user-behavior/index"),
+    //   name: "portrait",
+    //   meta: { title: "用户画像" },
+    // },
     {
       path: "userLoyalty",
       component: () => import("@/views/visitor-analysis/user-loyalty-analysis"),
