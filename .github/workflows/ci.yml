@@ -33,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: q82618362/clklog-frontend
+          images: registry.cn-guangzhou.aliyuncs.com/private-wen/clklog-frontend
           tags: |
             type=schedule
             type=semver,pattern={{version}}
