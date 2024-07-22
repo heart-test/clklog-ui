@@ -4,14 +4,12 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'main'
-      - 'demo'
+      - 'clklog-v1'
     tags:
       - 'v*'
   pull_request:
     branches:
-      - 'main'
-      - 'demo'
+      - 'clklog-v1'
   schedule:
     - cron: '0 0 * * *'
 
@@ -60,7 +58,10 @@ jobs:
             HTML_DIR=dist
       - name: Set Docker image tag
         id: set-tag
-        run: echo "::set-output name=tag::$(if [ $GITHUB_REF == 'refs/heads/main' ]; then echo latest; else echo ${GITHUB_REF#refs/heads/}; fi)"
+        run: ｜
+#          echo "::set-output name=tag::$(if [ $GITHUB_REF == 'refs/heads/main' ]; then echo latest; else echo ${GITHUB_REF#refs/heads/}; fi)"
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          echo "::set-output name=tag::${COMMIT_SHA}-v1"
       - name: Login to Aliyun Docker Registry
         uses: docker/login-action@v2
         with:
