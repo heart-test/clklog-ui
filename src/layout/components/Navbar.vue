@@ -2,12 +2,12 @@
   <div class="navbar">
     <div class="burying_point">
       <div style="display: flex; align-items: center">
-        <div class="logoFlag">
-          <img
-            class="imgLogo"
-            src="@/assets/images/logo.png"
-            @click="$router.push('/')"
-          />
+        <div
+          data-v-4a9546ad=""
+          class="logoFlag"
+          style="font-size: 20px; font-weight: bold; /* color: red; */"
+        >
+          大数据统计处理系统
         </div>
 
         <el-select
