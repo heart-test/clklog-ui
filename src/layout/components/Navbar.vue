@@ -2,13 +2,7 @@
   <div class="navbar">
     <div class="burying_point">
       <div style="display: flex; align-items: center">
-        <div class="logoFlag">
-          <img
-            class="imgLogo"
-            src="@/assets/images/logo.png"
-            @click="$router.push('/')"
-          />
-        </div>
+        <div data-v-c8ab7ffc="" data-v-4a9546ad="" class="logoFlag" style="font-size: 20px; font-weight: bold;"> 交友数据智能分析管理系统 </div>
 
         <el-select
           v-model="value"
