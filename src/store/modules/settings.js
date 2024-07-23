@@ -18,9 +18,9 @@ const state = {
   // }
   cologStyle:{
     $pv : "#fe547b",
-    $uv: "#85dec8",
+    $uv: "#cd0835",
     $visitCount : "#ffde84",
-    $ipCount: "#5dbaf7",
+    $ipCount: "#fe547b",
     $bounceRate : "#e4b2d8",
   }
 }
