@@ -36,7 +36,7 @@
                   <div style="overflow: hidden; text-overflow: ellipsis">
                     {{ scope.row.distinctId }}
                   </div>
-                  <div class="el-icon-view" style="color: #2c7be5"></div>
+                  <div class="el-icon-view" style="color: #fe547b"></div>
                 </div>
               </template>
             </el-table-column>

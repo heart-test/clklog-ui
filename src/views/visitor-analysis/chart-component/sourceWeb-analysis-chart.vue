@@ -191,7 +191,7 @@ export default {
       } else {
         this.bounceRate = [];
       }
-      // #2c7be5,#4c8fe9,#6ba3ed,#8bb6f1,#abcaf5
+      // #fe547b,#4c8fe9,#6ba3ed,#8bb6f1,#abcaf5
       let seriesdata = [
         {
           type: "bar",

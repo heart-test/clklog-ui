@@ -200,7 +200,7 @@ export default {
   color: #fd7e14;
 }
 .w158 {
-  color: #2c7be5;
+  color: #fe547b;
   font-size: 17px;
   line-height: 17px;
   // font-weight: bold;
@@ -253,7 +253,7 @@ export default {
             color: #252424;
             font-size: 13px;
             line-height: 14px;
-            color: #2c7be5;
+            color: #fe547b;
           }
         }
       }

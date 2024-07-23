@@ -296,7 +296,7 @@ export default {
             type: "line",
             itemStyle: {
               normal: {
-                // color: "#2c7be5",
+                // color: "#fe547b",
                 color:this.cologStyle.$pv,
               },
             },

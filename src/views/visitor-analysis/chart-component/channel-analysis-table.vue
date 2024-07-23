@@ -12,43 +12,43 @@
           >
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ item.pv || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ item.visitCount || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ item.uv || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ item.ipCount || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ averageRulesEvent(item.avgPv) || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ formatTimeEvent(item.avgVisitTime) || "--" }}</p>
             </div>
             <div
               class="bid-list-item w111"
-              :style="index == 0 ? 'color:#2c7be5' : 'color:#4d4d4d'"
+              :style="index == 0 ? 'color:#fe547b' : 'color:#4d4d4d'"
             >
               <p>{{ item.bounceRate || "--" }}</p>
             </div>
@@ -486,7 +486,7 @@ img {
   font-size: 16px;
   font-weight: 600;
   line-height: 16px;
-  color: #2c7be5;
+  color: #fe547b;
 }
 .chartsIcon {
   position: relative;

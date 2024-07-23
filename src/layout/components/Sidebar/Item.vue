@@ -26,7 +26,7 @@ export default {
 
     if (title) {
       if (title == "商业版功能") {
-        vnodes.push(<span slot='title' style= 'color: #2c7be5'>{(title)}</span>)
+        vnodes.push(<span slot='title' style= 'color: #fe547b'>{(title)}</span>)
       }else{
         vnodes.push(<span slot='title'>{(title)}</span>)
       }

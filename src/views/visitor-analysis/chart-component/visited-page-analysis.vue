@@ -865,7 +865,7 @@ export default {
   display: flex;
   border: solid;
   border-radius: 15px;
-  color: #2c7be5;
+  color: #fe547b;
   font-size: 12px;
   padding: 5px;
   cursor: pointer;

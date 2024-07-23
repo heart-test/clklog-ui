@@ -557,7 +557,7 @@ export default {
         font-weight: 500;
         line-height: 13px;
         line-height: 20px;
-        color: #2c7be5;
+        color: #fe547b;
         .firstTime {
           width: 100%;
           text-align: left;
@@ -588,7 +588,7 @@ export default {
       color: #5a607f;
       .number {
         font-size: 18px;
-        color: #2c7be5;
+        color: #fe547b;
         font-weight: 500;
       }
     }
@@ -620,7 +620,7 @@ export default {
         cursor: pointer;
         width: 54px;
         height: 21px;
-        border: 1px solid #2c7be5;
+        border: 1px solid #fe547b;
         border-radius: 4px;
         font-size: 12px;
         font-weight: 400;
@@ -668,7 +668,7 @@ export default {
         .right_body_http {
           min-height: 50px;
           line-height: 13px;
-          color: #2c7be5;
+          color: #fe547b;
           font-size: 13px;
           text-align: right;
           position: relative;

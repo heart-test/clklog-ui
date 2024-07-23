@@ -70,7 +70,7 @@ export default {
               position: "top",
             },
             itemStyle: {
-              color: "#2c7be5",
+              color: "#fe547b",
             },
           },
         ],

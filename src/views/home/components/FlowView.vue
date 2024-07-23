@@ -732,7 +732,7 @@ export default {
       .w158 {
         font-size: 16px;
         font-weight: bold;
-        color: #2c7be5;
+        color: #fe547b;
         line-height: 17px;
       }
     }

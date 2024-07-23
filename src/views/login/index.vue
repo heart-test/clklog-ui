@@ -356,7 +356,7 @@ $light_gray: #eee;
       font-size: 12px;
       font-weight: 400;
       line-height: 22px;
-      color: #2c7be5;
+      color: #fe547b;
       cursor: pointer;
     }
   }

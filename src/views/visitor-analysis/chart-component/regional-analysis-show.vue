@@ -207,7 +207,7 @@ export default {
           calculable: true,
           // orient: "horizontal",
           // color: ["#0b50b9", "#fff"],
-          color: ["#2c7be5", "#fff"],
+          color: ["#fe547b", "#fff"],
         },
         series: [
           {

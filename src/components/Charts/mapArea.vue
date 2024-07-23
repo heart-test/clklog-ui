@@ -156,7 +156,7 @@ export default {
           top: "bottom",
           text: ["高", "低"],
           calculable: true,
-          color: ["#2c7be5", "#fff"],
+          color: ["#fe547b", "#fff"],
         },
         series: [
           {
