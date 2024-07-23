@@ -4,14 +4,12 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'main'
-      - 'demo'
+      - 'clklog-v2'
     tags:
       - 'v*'
   pull_request:
     branches:
-      - 'main'
-      - 'demo'
+      - 'clklog-v2'
   schedule:
     - cron: '0 0 * * *'
 
@@ -60,7 +58,9 @@ jobs:
             HTML_DIR=dist
       - name: Set Docker image tag
         id: set-tag
-        run: echo "::set-output name=tag::$(if [ $GITHUB_REF == 'refs/heads/main' ]; then echo latest; else echo ${GITHUB_REF#refs/heads/}; fi)"
+        run: |
+          echo "::set-output name=tag::$(if [ $GITHUB_REF == 'refs/heads/main' ]; then echo latest; else echo ${GITHUB_REF#refs/heads/}; fi)"
+          echo "COMMIT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - name: Login to Aliyun Docker Registry
         uses: docker/login-action@v2
         with:
@@ -71,5 +71,22 @@ jobs:
       - name: Push image to Aliyun Docker Registry
         run: |
           docker buildx imagetools create \
-            --tag registry.cn-guangzhou.aliyuncs.com/private-wen/clklog_frontend:${{ steps.set-tag.outputs.tag }} \
+            --tag registry.cn-guangzhou.aliyuncs.com/private-wen/clklog_frontend:${{ env.COMMIT_SHA }}-v2 \
             q82618362/clklog-frontend:${{ steps.set-tag.outputs.tag }}
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Git Head Env
+        run: echo "COMMIT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Deploy with Docker Compose
+        run: |
+          cd /opt/clklog-docker-compose
+          sed -i "s|^\(UI_V2_IMAGE=.*:\).*$|\1${{ env.COMMIT_SHA }}-v2|" ./.env
+          docker-compose -f docker-compose-clklog-full.yml down
+          docker-compose -f docker-compose-clklog-full.yml up -d
+
